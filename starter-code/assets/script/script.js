@@ -58,3 +58,14 @@ const estimateStrength = (password) => {
   passwordState.textContent = result.feedback.suggestions.join(' ');
   passwordStrength.className = `strength-${result.score}`;
 };
+
+// Event listener for Generate button click
+generateBtn.addEventListener('click', (event) => {
+  event.preventDefault();
+  const password = generatePassword();
+  if (password) estimateStrength(password);
+});
+
+
+// Event listener for Copy button click
+copyIcon.addEventListener('click', copyToClipboard);
