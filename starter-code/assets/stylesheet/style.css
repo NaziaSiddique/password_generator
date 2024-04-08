@@ -51,3 +51,20 @@ main {
   color: var(--clr-neon-green);
   visibility: hidden;
 }
+
+.result__text-field {
+  all: unset;
+  background-color: transparent;
+  border: none;
+  cursor: default;
+  color: var(--clr-almost-white);
+}
+
+.password-generator__result img:hover {
+  cursor: pointer;
+}
+
+fieldset {
+  border: none;
+  padding: 0;
+}
