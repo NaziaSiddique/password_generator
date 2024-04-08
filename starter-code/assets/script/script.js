@@ -51,3 +51,10 @@ const generatePassword = () => {
   output.value = password;
   return password;
 };
+
+// Function to estimate password strength
+const estimateStrength = (password) => {
+  const result = zxcvbn(password);
+  passwordState.textContent = result.feedback.suggestions.join(' ');
+  passwordStrength.className = `strength-${result.score}`;
+};
