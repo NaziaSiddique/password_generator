@@ -17,3 +17,37 @@ const charSets = {
   numbers: "0123456789",
   symbols: "£$&()*+[]@#^-_!?"
 };
+
+// Initializing character length value
+sliderValue.textContent = slider.value;
+
+// Event listener for slider change
+form.addEventListener('input', () => {
+  sliderValue.textContent = slider.value;
+});
+
+// Function to generate password based on chosen options
+const generatePassword = () => {
+  const passwordOptions = [];
+  constraints.forEach(option => {
+    if (option.checked && charSets[option.value]) {
+      passwordOptions.push(charSets[option.value]);
+    }
+  });
+
+  const passwordLength = slider.value;
+  let password = "";
+
+  if (passwordOptions.length === 0) return "";
+
+  for (let i = 0; i < passwordLength; i++) {
+    const randomCategoryIndex = Math.floor(Math.random() * passwordOptions.length);
+    const category = passwordOptions[randomCategoryIndex];
+    const randomCharIndex = Math.floor(Math.random() * category.length);
+    const char = category[randomCharIndex];
+    password += char;
+  }
+
+  output.value = password;
+  return password;
+};
