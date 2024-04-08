@@ -69,3 +69,8 @@ generateBtn.addEventListener('click', (event) => {
 
 // Event listener for Copy button click
 copyIcon.addEventListener('click', copyToClipboard);
+
+// Function to copy generated password to clipboard
+const copyToClipboard = () => {
+  
+}
