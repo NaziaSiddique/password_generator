@@ -22,3 +22,19 @@ main {
   color: var(black);
   text-align: center;
 }
+
+.password-generator__result {
+  color: grey;
+  display: flex;
+  gap: .5rem;
+  align-items: center;
+  background-color: var(--clr-dark-grey);
+  padding: 1rem;
+}
+
+.copied {
+  margin-left: auto;
+  text-transform: uppercase;
+  color: var(--clr-neon-green);
+  visibility: hidden;
+}
