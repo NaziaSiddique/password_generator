@@ -1,22 +1,18 @@
 @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@700&display=swap');
 
 :root {
-
   --clr-almost-white: hsl(252, 11%, 91%);
   --clr-grey: hsl(251, 9%, 53%);
-  --clr-dark-grey: hsl(248, 10%, 15%);
-  --clr-very-dark-grey: hsl(248, 15%, 11%);
+  --clr-dark-grey: hsl(248, 10%, 25%);
+  --clr-very-dark-grey: hsl(248, 15%, 20%);
 
-
-
+  --clr-neon-green: hsl(145, 58%, 55%);
   --ff-primary: 'JetBrains Mono', monospace;
-
 }
 
 body {
   font-family: var(--ff-primary);
   background-color: var(--clr-very-dark-grey);
-
   display: flex;
   justify-content: center;
   align-items: center;
@@ -32,12 +28,12 @@ main {
 
 .title {
   font-size: 2rem;
-  color: var(--clr-grey);
+  color: var(--clr-almost-white);
   text-align: center;
 }
 
 .password-generator__result {
-  color: grey;
+  color: var(--clr-almost-white);
   display: flex;
   gap: .5rem;
   align-items: center;
@@ -52,7 +48,7 @@ main {
   visibility: hidden;
 }
 
-.result__text-field {
+.result__text_field {
   all: unset;
   background-color: transparent;
   border: none;
