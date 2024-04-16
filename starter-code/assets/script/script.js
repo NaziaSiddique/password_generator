@@ -2,11 +2,12 @@
 const slider = document.querySelector('input[type=range]');
 const sliderValue = document.querySelector('.value');
 const form = document.querySelector('form');
-const generateBtn = document.querySelector('button');
 const constraints = document.querySelectorAll('input[name=options]');
-const output = document.querySelector('.result__text_field');
+const output = document.querySelector('.result__text-field');
 const passwordState = document.querySelector('.password-strength__state');
 const passwordStrength = document.querySelector('.password-strength__indicator div');
+const generateBtn = document.querySelector('#generateBtn');
+
 
 // Character sets
 const charSets = {
@@ -58,8 +59,7 @@ function updatePasswordStrength(password) {
 }
 
 // Event listeners
-generateBtn.addEventListener('click', (e) => {
-    e.preventDefault();
-    generatePassword();
-});
+  generateBtn.addEventListener('click', function(e) {
+      generatePassword(); 
+  });
 
